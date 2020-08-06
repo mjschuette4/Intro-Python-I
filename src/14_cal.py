@@ -36,7 +36,7 @@ from datetime import date
 # month = int(sys.argv[1]) if len(sys.argv[1]) == 2 else date.month()
 
 year =  date.today().year if len(sys.argv) < 3 else int(sys.argv[2])
-month = date.today().month if len(sys.argv) < 3 else int(sys.argv[1])
+month = date.today().month if len(sys.argv) == 1 else int(sys.argv[1])
 print (year, month)
 
 

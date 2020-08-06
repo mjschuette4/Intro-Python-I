@@ -10,7 +10,7 @@ def change_x():
 change_x()
 
 # This prints 12. What do we have to modify in change_x() to get it to print 99?
-print('After:', x)
+print(x)
 
 
 # This nested function has a similar problem.

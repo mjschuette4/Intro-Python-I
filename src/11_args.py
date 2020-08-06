@@ -48,16 +48,14 @@ print('Should be 9:',f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4(*args, **kargs):
-    try:
-        for i in kargs:
-            print(f'key: {i}, value: {kargs[i]}')
-        for i in args:
-            if type(i) is dict:
-                for ii in i:
-                    print(f'Nested: key: {ii}, value: {i[ii]}')
-    except:
-        print(kargs)
+def f4(**kargs):
+    # try:
+        # for i in kargs:
+        #     print(f'key: {i}, value: {kargs[i]}')
+        for key, value in kargs.items():
+            print(key, value)
+    # except:
+    #     print(kargs)
 # Should print
 # key: a, value: 12
 # key: b, value: 30
@@ -75,4 +73,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d)
+f4(**d)
